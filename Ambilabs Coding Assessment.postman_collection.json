@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "71b7a45b-4156-4314-a766-7da71d49e8c8",
+		"name": "Ambilabs Coding Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"task_id\": \"task_001\",\n    \"title\": \"Do the ambilabs coding\",\n    \"description\": \"Code the ambilabs assessment\",\n    \"expired\": \"05/02/2021 15:30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/create_task",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"create_task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All non Expired Tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/tasks/all_non_expired",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"tasks",
+						"all_non_expired"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Bulk Tasks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"task_id\": \"task_002\",\n        \"title\": \"Do the ambilabs coding\",\n        \"description\": \"Code the ambilabs assessment\",\n        \"expired\": \"05/02/2021 15:30\"\n    },\n    {\n        \"task_id\": \"task_003\",\n        \"title\": \"Clean the house\",\n        \"description\": \"DO the house chores\",\n        \"expired\": \"06/02/2021 15:30\"\n    },{\n        \"task_id\": \"task_004\",\n        \"title\": \"Do the laundry\",\n        \"description\": \"Do the laundry at home\",\n        \"expired\": \"07/02/2021 15:30\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/create_bulk_tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"create_bulk_tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Task by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/task/task_001",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"task",
+						"task_001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task by ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"update ambilabs\",\n    \"description\": \"update the create of ambilabs\",\n    \"expired\": \"05/02/2021 12:30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/update_task/task_001",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"update_task",
+						"task_001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/delete_task/task_001",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"delete_task",
+						"task_001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Tasks with Expired Tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/tasks/all",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"tasks",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
